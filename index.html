@@ -1348,51 +1348,62 @@
         </p>
       </div>
       <div class="contact-grid">
-        <div class="contact-form">
-          <form>
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label">이름 <span class="en">(Name)</span></label>
-                <input type="text" class="input" placeholder="홍길동" />
-              </div>
-              <div class="form-field">
-                <label class="form-label">회사명 <span class="en">(Company)</span></label>
-                <input type="text" class="input" placeholder="Company / Organization" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label class="form-label">이메일 <span class="en">(Email)</span></label>
-                <input type="email" class="input" placeholder="you@example.com" />
-              </div>
-              <div class="form-field">
-                <label class="form-label">문의 유형 <span class="en">(Inquiry Type)</span></label>
-                <select class="select">
-                  <option value="">선택해 주세요</option>
-                  <option>시장조사 (Market Research)</option>
-                  <option>여론조사 (Opinion / Policy)</option>
-                  <option>트렌드 분석 (Trend &amp; Topic)</option>
-                  <option>기타 / 제휴 문의 (Others / Partnership)</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field" style="flex:1 1 100%;">
-                <label class="form-label">상세 문의 내용 <span class="en">(Project Detail)</span></label>
-                <textarea class="textarea" placeholder="프로젝트의 목적, 타임라인, 예산 범위 등을 간단히 적어 주시면 더 빠르게 도와드릴 수 있습니다."></textarea>
-              </div>
-            </div>
-            <div class="form-row" style="margin-top:4px;">
-              <button type="button" class="btn-primary">
-                문의 보내기 (Submit Inquiry)
-              </button>
-            </div>
-            <p class="contact-note">
-              폼을 제출해 주시면 <strong>1~2 영업일 이내</strong>에 담당자로부터 회신을 드립니다.
-              민감한 정보가 포함된 경우, 별도의 보안 채널을 안내해 드립니다.
-            </p>
-          </form>
-        </div>
+<div class="contact-form">
+  <form action="https://formsubmit.co/martechlab94@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="[MartechLab] 사이트에서 새로운 문의가 도착했습니다." />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_next" value="https://martechlab.co.kr/#contact" />
+    <input type="hidden" name="_captcha" value="false" />
+
+    <div class="form-row">
+      <div class="form-field">
+        <label class="form-label">이름 <span class="en">(Name)</span></label>
+        <input type="text" class="input" name="name" placeholder="홍길동" required />
+      </div>
+      <div class="form-field">
+        <label class="form-label">회사명 <span class="en">(Company)</span></label>
+        <input type="text" class="input" name="company" placeholder="Company / Organization" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label class="form-label">이메일 <span class="en">(Email)</span></label>
+        <input type="email" class="input" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="form-field">
+        <label class="form-label">문의 유형 <span class="en">(Inquiry Type)</span></label>
+        <select class="select" name="inquiry_type">
+          <option value="">선택해 주세요</option>
+          <option value="market_research">시장조사 (Market Research)</option>
+          <option value="opinion_policy">여론조사 (Opinion / Policy)</option>
+          <option value="trend_topic">트렌드 분석 (Trend &amp; Topic)</option>
+          <option value="other">기타 / 제휴 문의 (Others / Partnership)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field" style="flex:1 1 100%;">
+        <label class="form-label">상세 문의 내용 <span class="en">(Project Detail)</span></label>
+        <textarea class="textarea" name="message"
+          placeholder="프로젝트의 목적, 타임라인, 예산 범위 등을 간단히 적어 주시면 더 빠르게 도와드릴 수 있습니다."
+          required></textarea>
+      </div>
+    </div>
+
+    <div class="form-row" style="margin-top:4px;">
+      <button type="submit" class="btn-primary">
+        문의 보내기 (Submit Inquiry)
+      </button>
+    </div>
+    <p class="contact-note">
+      폼을 제출해 주시면 <strong>1~2 영업일 이내</strong>에 담당자로부터 회신을 드립니다.
+      민감한 정보가 포함된 경우, 별도의 보안 채널을 안내해 드립니다.
+    </p>
+  </form>
+</div>
+
         <div class="contact-meta-card">
           <h3>MartechLab Inc.</h3>
           <p>
